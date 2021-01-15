@@ -7,7 +7,7 @@ http://www.rabbitnroo.com
 
 # dev
 ### Get started
-1. [install VS Code](https://code.visualstudio.com/download)]
+1. [install VS Code](https://code.visualstudio.com/download)
 2. [install NodeJS](https://nodejs.org/en/download/)
 3. [install Docker](https://docs.docker.com/get-docker/)
 4. Install yarn
