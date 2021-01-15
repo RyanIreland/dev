@@ -7,27 +7,27 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 - [Create a Kubernetes cluster](https://console.cloud.google.com/kubernetes/list?project=utopian-theater-297420&folder=&organizationId=)
 
 # GKE 
-> gcloud kubectl init
-> gcloud container clusters get-credentials my-first-cluster-1 --zone us-central1-c --project utopian-theater-297420
+> $ gcloud kubectl init
+> $ gcloud container clusters get-credentials my-first-cluster-1 --zone us-central1-c --project utopian-theater-297420
 >
-- Deploy App
+#### Deploy App
 - Deploy rnr-rest-api & rnr-ui
-> 	kubectl apply -f rnr-rest-api.yaml
+> 	$ kubectl apply -f rnr-rest-api.yaml
 > 
-> 	kubectl apply -f rnr-rest-api-service.yaml
+> 	$ kubectl apply -f rnr-rest-api-service.yaml
 > 
-> 	kubectl apply -f rnr-ui.yaml
+> 	$ kubectl apply -f rnr-ui.yaml
 > 
-> 	kubectl apply -f rnr-ui-service.yaml
-- Services expose with NodePorts 3600:3600 & 3000:3000
+> 	$ kubectl apply -f rnr-ui-service.yaml
+- Services now exposed with NodePorts 3600:3600 & 3000:3000
 - From GKE console, select both services and create ren-ingress default backed rnr-ui-service
-> 	Add /auth & /users to rnr-rest-api-service
+-- Add /auth & /users to rnr-rest-api-service
 > 
-> 	Kubectl get ingress -o yaml
-- Can now user rnr-ingress.yaml
-> 	Kubectl apply -f rnr-ingress.yaml
+> 	$ kubectl get ingress -o yaml > rnr-ingress.yaml
+- Can now use rnr-ingress.yaml
+> 	$ kubectl apply -f rnr-ingress.yaml
 - Add annotation to rnr-ingress yaml:
-> 	kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
+> 	$ kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
 
 ### View VM OS details
 > gcloud compute instances os-inventory describe gke-my-first-cluster-1-default-pool-6d3f4eac-f7lg
