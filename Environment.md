@@ -78,6 +78,12 @@
 > 
 > }
 
+
+### Yarn
+> $ yarn -version
+> 
+> 1.22.10
+
 ### Cypress
 cypress": "^6.2.1"
 
