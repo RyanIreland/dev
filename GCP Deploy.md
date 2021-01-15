@@ -49,13 +49,13 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 > 	Permanent redirect (301), Do not forward path, Enable SSL
 - In rnr-ingress.yaml
 
-...Map static IP to domain with annotation:
+Map static IP to domain with annotation:
 > 	kubernetes.io/ingress.global-static-ip-name: 'web-static-ip'
 
-...Map domain with rule:
+Map domain with rule:
 > 	- host: www.rabbitnroo.com
 
-...Add cert annotation:
+Add cert annotation:
 > 	networking.gke.io/managed-certificates: 'rnr-cert'
 - Apply both of the above
 > 	$ kubectl apply -f rnr-cert.yaml
