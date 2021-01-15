@@ -1,8 +1,8 @@
 # Accounts
-- [Github account] (https://github.com)
-- [DockerHub account] (https://hub.docker.com/?ref=login)
-- [Google Cloud Platform] (https://console.cloud.google.com/billing/01D4EF-77D620-DAFCAA?project=utopian-theater-297420)
-- [Mongo DB] (https://account.mongodb.com/account/login)
+[Github account] (https://github.com)
+[DockerHub account] (https://hub.docker.com/?ref=login)
+[Google Cloud Platform] (https://console.cloud.google.com/billing/01D4EF-77D620-DAFCAA?project=utopian-theater-297420)
+[Mongo DB] (https://account.mongodb.com/account/login)
 
 # Credentials
 - Google credentials
