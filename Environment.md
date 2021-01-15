@@ -153,11 +153,11 @@
 > Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.10", GitCommit:"575467a0eaf3ca1f20eb86215b3bde40a5ae617a", GitTreeState:"clean", BuildDate:"2019-12-11T12:32:32Z", GoVersion:"go1.12.12", Compiler:"gc", Platform:"linux/amd64"}
 
 ### Google Cloud SDK
-> google-cloud-sdk-VERSION-darwin-x86_64.tar
+> downloaded google-cloud-sdk-VERSION-darwin-x86_64.tar
 > 
-> ./google-cloud-sdk/install.sh
+> $ ./google-cloud-sdk/install.sh
 > 
-> ./google-cloud-sdk/bin/gcloud init
+> $ ./google-cloud-sdk/bin/gcloud init
 > 
 > Picked "7" as the default compute zone: us-central1-c
 > 
@@ -166,8 +166,8 @@
 > Cluster is my-first-cluster-1
 > 
 > gcloud container clusters get-credentials my-first-cluster-1 --zone us-central1-c --project utopian-theater-297420
-
-### Google Cloud SDK
+> 
+> 
 > $ gcloud -v
 > 
 > Google Cloud SDK 322.0.0
