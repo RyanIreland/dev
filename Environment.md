@@ -1,8 +1,8 @@
 # Accounts
-[Github account] (https://github.com)
-[DockerHub account] (https://hub.docker.com/?ref=login)
-[Google Cloud Platform] (https://console.cloud.google.com/billing/01D4EF-77D620-DAFCAA?project=utopian-theater-297420)
-[Mongo DB] (https://account.mongodb.com/account/login)
+[Github account](https://github.com)
+[DockerHub account](https://hub.docker.com/?ref=login)
+[Google Cloud Platform](https://console.cloud.google.com/billing/01D4EF-77D620-DAFCAA?project=utopian-theater-297420)
+[Mongo DB](https://account.mongodb.com/account/login)
 
 # Credentials
 - Google credentials
@@ -15,21 +15,28 @@
 
 # Local Environment
 
-## VS Code
+### VS Code
 > Version: 1.52.1
+> 
 > Commit: ea3859d4ba2f3e577a159bc91e3074c5d85c0523
+> 
 > Date: 2020-12-16T16:30:02.420Z (3 wks ago)
+> 
 > Electron: 9.3.5
+> 
 > Chrome: 83.0.4103.122
+> 
 > Node.js: 12.14.1
+> 
 > V8: 8.3.110.13-electron.0
+> 
 > OS: Darwin x64 19.6.0
 
-## NodeJS
+### NodeJS
 > $ node -v
 > v14.8.0
 
-## NPM
+### NPM
 > $ npm version
 > {
 >   labs: '1.0.0',
@@ -51,13 +58,13 @@
 >   zlib: '1.2.11'
 > }
 
-## Postman
+### Postman
 > Version 7.36.1 (7.36.1)
 
-## MongoDB Compass
+### MongoDB Compass
 > Version 1.24.6 (1.24.6)
 
-## Docker
+### Docker
 > Rocks-MacBook-Pro:~ rockbarney$ docker version
 > Client: Docker Engine - Community
 >  Version:           19.03.12
@@ -87,16 +94,16 @@
 >   Version:          0.18.0
 >   GitCommit:        fec3683
 
-# Python
+### Python
 > $ python -V
 > Python 2.7.16
 
-## Kubectl
+### Kubectl
 > $ kubectl version
 > Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.1", GitCommit:"c4d752765b3bbac2237bf87cf0b1c2e307844666", GitTreeState:"clean", BuildDate:"2020-12-18T12:09:25Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"darwin/amd64"}
 > Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.10", GitCommit:"575467a0eaf3ca1f20eb86215b3bde40a5ae617a", GitTreeState:"clean", BuildDate:"2019-12-11T12:32:32Z", GoVersion:"go1.12.12", Compiler:"gc", Platform:"linux/amd64"}
 
-## Google Cloud SDK
+### Google Cloud SDK
 > google-cloud-sdk-VERSION-darwin-x86_64.tar
 > ./google-cloud-sdk/install.sh
 > ./google-cloud-sdk/bin/gcloud init
@@ -105,7 +112,7 @@
 > Cluster is my-first-cluster-1
 > gcloud container clusters get-credentials my-first-cluster-1 --zone us-central1-c --project utopian-theater-297420
 
-## Google Cloud SDK
+### Google Cloud SDK
 > $ gcloud -v
 > Google Cloud SDK 322.0.0
 > beta 2021.01.05
