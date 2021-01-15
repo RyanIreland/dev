@@ -78,6 +78,9 @@
 > 
 > }
 
+### Cypress
+cypress": "^6.2.1"
+
 ### Postman
 > Version 7.36.1 (7.36.1)
 
