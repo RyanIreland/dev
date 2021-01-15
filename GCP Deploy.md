@@ -38,7 +38,7 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 - Create a static IP
 > gcloud compute addresses create web-static-ip --global
 
-- [Buy a domain "rabbitnroo.com"](https://domains.google.com/registrar/search?searchTerm=ren.com&hl=en&_ga=2.67240145.1107454859.1610462061-863361608.1610462061#)
+- [Buy a domain "rabbitnroo.com"](https://domains.google.com/registrar)
 
 - [Create a google DNS zone "rabbitnroo"](https://domains.google.com/registrar/rabbitnroo.com/dns?_ga=2.42768225.599502862.1610551551-863361608.1610462061)
 
