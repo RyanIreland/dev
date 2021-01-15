@@ -1,3 +1,6 @@
+# First time GCP Deployment Steps
+This page outlines the steps to deploy app on a kubernetes cluster on GKE.
+
 # GCP
 - [Create GCP billed account](https://console.cloud.google.com/billing/01D4EF-77D620-DAFCAA?project=utopian-theater-297420)
 - [Google Business
@@ -6,11 +9,12 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 # GKE
 - [Create a Kubernetes cluster](https://console.cloud.google.com/kubernetes/list?project=utopian-theater-297420&folder=&organizationId=)
 
-# GKE 
+### Make cluster available to local control with kubectl
 > $ gcloud kubectl init
-> $ gcloud container clusters get-credentials my-first-cluster-1 --zone us-central1-c --project utopian-theater-297420
 >
-#### Deploy App
+> $ gcloud container clusters get-credentials my-first-cluster-1 --zone us-central1-c --project utopian-theater-297420
+
+# Deploy App
 - Deploy rnr-rest-api & rnr-ui
 > 	$ kubectl apply -f rnr-rest-api.yaml
 > 
@@ -20,9 +24,8 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 > 
 > 	$ kubectl apply -f rnr-ui-service.yaml
 - Services now exposed with NodePorts 3600:3600 & 3000:3000
-- From GKE console, select both services and create ren-ingress default backed rnr-ui-service
--- Add /auth & /users to rnr-rest-api-service
-> 
+- From GKE console, select both services and create rnr-ingress with default backed rnr-ui-service
+- (add /rnr/auth & /rnr/users paths to rnr-rest-api-service)
 > 	$ kubectl get ingress -o yaml > rnr-ingress.yaml
 - Can now use rnr-ingress.yaml
 > 	$ kubectl apply -f rnr-ingress.yaml
@@ -36,9 +39,9 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 Create a static IP
 > gcloud compute addresses create web-static-ip --global
 
-## [Buy a domain "rabbitnroo.com"](https://domains.google.com/registrar/search?searchTerm=ren.com&hl=en&_ga=2.67240145.1107454859.1610462061-863361608.1610462061#)
+- [Buy a domain "rabbitnroo.com"](https://domains.google.com/registrar/search?searchTerm=ren.com&hl=en&_ga=2.67240145.1107454859.1610462061-863361608.1610462061#)
 
-## (Create a google DNS zone "rabbitnroo"](https://domains.google.com/registrar/rabbitnroo.com/dns?_ga=2.42768225.599502862.1610551551-863361608.1610462061)
+- [Create a google DNS zone "rabbitnroo"](https://domains.google.com/registrar/rabbitnroo.com/dns?_ga=2.42768225.599502862.1610551551-863361608.1610462061)
 
 ### Verify DNSSEC is enabled
 - Add static ip registered Host records for rabbitnroo.com & www.rabbitnroo.com
@@ -56,8 +59,10 @@ Create a static IP
 > 	$ kubectl apply -f rnr-ingress.yaml
 > 	$ kubectl describe managedcertificate rnr-cert
 
-### [View load balancer](https://console.cloud.google.com/net-services/loadbalancing/loadBalancers/list?project=utopian-theater-297420)
+# Notes
+- [View load balancer](https://console.cloud.google.com/net-services/loadbalancing/loadBalancers/list?project=utopian-theater-297420)
 [Details](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress)
 
-### View managed certificate list
+
+- View managed certificate list
 > $ gcloud beta compute ssl-certificates list
