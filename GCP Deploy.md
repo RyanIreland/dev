@@ -29,7 +29,7 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 - Now from command line, get the ingress yaml
 > 	$ kubectl get ingress -o yaml > rnr-ingress.yaml
 - Can now customize rnr-ingress.yaml
-- Add annotation to rnr-ingress yaml:
+- Add annotation to rnr-ingress yaml
 > 	$ kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
 - Update the ingress 
 > 	$ kubectl apply -f rnr-ingress.yaml
@@ -47,8 +47,8 @@ Create a business](https://business.google.com/site/l/15307595727785047865?hl=en
 - Add Synthetic record:
 > 	www.rabbitnroo.com → 34.120.6.200
 > 	Permanent redirect (301), Do not forward path, Enable SSL
-- In rnr-ingress.yaml:
-- Map static IP to domain with annotation
+- In rnr-ingress.yaml
+..- Map static IP to domain with annotation
 > 	$ kubernetes.io/ingress.global-static-ip-name: 'web-static-ip'
 - Map domain with rule
 > 	- host: www.rabbitnroo.com
